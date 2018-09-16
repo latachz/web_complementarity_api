@@ -1,13 +1,15 @@
 defmodule Complementarity.Endpoint do
   use Plug.Router
   require Logger
+  plug CORSPlug, origin: ~r/.*/
 
   plug Plug.Logger
   # NOTE: The line below is only necessary if you care about parsing JSON
   plug Plug.Parsers, parsers: [:json], json_decoder: Poison
   plug :match
   plug :dispatch
-  plug CORSPlug
+
+
 
   def init(options) do
     options
