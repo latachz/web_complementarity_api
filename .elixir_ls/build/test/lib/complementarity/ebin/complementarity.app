@@ -1,0 +1,11 @@
+{application,complementarity,
+             [{applications,[kernel,stdlib,elixir,logger,poison,cowboy,plug,
+                             cors_plug]},
+              {description,"complementarity"},
+              {modules,['Elixir.Complementarity',
+                        'Elixir.Complementarity.Endpoint',
+                        'Elixir.ComplementarityFunc']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {mod,{'Elixir.Complementarity',[]}},
+              {env,[{cowboy_port,4000}]}]}.
